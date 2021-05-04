@@ -1,0 +1,22 @@
+<title>Anti rick roll website</title>
+<script>
+  
+  var html = fetch(window.prompt('Insert a website to scan for rick rolling')).then(function (res) {
+    return res.text();
+  }).then(function (text) {
+    console.log(text)
+    if (text.replace(' ', '').toUpperCase().includes('RICKROLL') || text.replace(' ', '').includes('youtube.com/watch?v=dQw4w9WgXcQ')) {
+    alert('There\'s Rick Rolling on this website')
+    
+    } else {
+        alert('there may not be any Rick rolling on this website')
+        
+    };
+    
+  }).catch(err => {
+    alert('an error occurred ' + err)
+    console.log(err)
+  });
+
+  
+</script>
